@@ -15,12 +15,14 @@ def fetch_weather(message)
 
   # Coordinates from keyword
   coord = Geocoder.search(location).first.coordinates
-  url = "https://api.openweathermap.org/data/2.5/onecall?lat=#{coord[0]}&lon=#{coord[1]}&exclude=current,minutely,hourly&appid=#{api_key}"
+  url = "https://api.openweathermap.org/data/3.0/onecall?lat=#{coord[0]}&lon=#{coord[1]}&exclude=current,minutely,hourly&appid=#{api_key}"
+
   begin
     data_serialized = URI.open(url).read
   rescue OpenURI::HTTPError => e
-    return { mostly: '', temps: '', report: 'No weather forecast for this city...' }
+    return 'No weather forecast for this city...'
   end
+
   data = JSON.parse(data_serialized)['daily'][0..3]
 
   days = ['today', 'tomorrow', (Date.today + 2).strftime('%A'), (Date.today + 3).strftime('%A')]
