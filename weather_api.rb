@@ -4,6 +4,10 @@ require 'json'
 require 'open-uri'
 
 def fetch_weather(message)
+  # Check if the API key is set
+  api_key = ENV["WEATHER_API"]
+  return "Sorry, you haven't setup Open weather API token yet" unless api_key
+
   # Accepted message:
   # ~~~~~ weather in XXXXX
   #  ^anything          ^will become the location
@@ -11,7 +15,6 @@ def fetch_weather(message)
 
   # Coordinates from keyword
   coord = Geocoder.search(location).first.coordinates
-  api_key = ENV["WEATHER_API"]
   url = "https://api.openweathermap.org/data/2.5/onecall?lat=#{coord[0]}&lon=#{coord[1]}&exclude=current,minutely,hourly&appid=#{api_key}"
   begin
     data_serialized = URI.open(url).read
