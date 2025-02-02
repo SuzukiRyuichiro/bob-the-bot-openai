@@ -38,7 +38,7 @@ GEM
     mustermann (2.0.2)
       ruby2_keywords (~> 0.0.1)
     netrc (0.11.0)
-    nio4r (2.5.8)
+    nio4r (2.7.4)
     public_suffix (4.0.7)
     puma (5.6.4)
       nio4r (~> 2.0)
@@ -83,7 +83,7 @@ PLATFORMS
 DEPENDENCIES
   geocoder
   http
-  line-bot-api (~> 1.18.0)
+  line-bot-api
   puma
   reel
   rest-client
