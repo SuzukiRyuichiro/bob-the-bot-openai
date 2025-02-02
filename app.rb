@@ -34,7 +34,7 @@ def bot_answer_to(message, user_name)
     fetch_tokyo_events
   elsif message.end_with?('?')
     # respond if a user asks a question
-    "Good question, #{user_name}!"
+    "Good question, #{user_name}!" # We can send this to OpenAI API
   else
     ["I couldn't agree more.", 'Great to hear that.', 'Interesting.'].sample
   end

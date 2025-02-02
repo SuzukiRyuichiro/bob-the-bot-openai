@@ -1,51 +1,68 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.8.0)
-      public_suffix (>= 2.0.2, < 5.0)
+    addressable (2.8.7)
+      public_suffix (>= 2.0.2, < 7.0)
+    base64 (0.2.0)
     celluloid (0.18.0)
       timers (~> 4)
     celluloid-io (0.17.3)
       celluloid (>= 0.17.2)
       nio4r (>= 1.1)
       timers (>= 4.1.1)
+    csv (3.3.2)
     daemons (1.4.1)
-    domain_name (0.5.20190701)
-      unf (>= 0.0.5, < 1.0.0)
+    domain_name (0.6.20240107)
     eventmachine (1.2.7)
-    ffi (1.15.5)
-    ffi-compiler (1.0.1)
-      ffi (>= 1.0.0)
+    ffi (1.17.1)
+    ffi (1.17.1-aarch64-linux-gnu)
+    ffi (1.17.1-aarch64-linux-musl)
+    ffi (1.17.1-arm-linux-gnu)
+    ffi (1.17.1-arm-linux-musl)
+    ffi (1.17.1-arm64-darwin)
+    ffi (1.17.1-x86-linux-gnu)
+    ffi (1.17.1-x86-linux-musl)
+    ffi (1.17.1-x86_64-darwin)
+    ffi (1.17.1-x86_64-linux-gnu)
+    ffi (1.17.1-x86_64-linux-musl)
+    ffi-compiler (1.3.2)
+      ffi (>= 1.15.5)
       rake
-    geocoder (1.8.0)
-    http (5.1.0)
+    geocoder (1.8.5)
+      base64 (>= 0.1.0)
+      csv (>= 3.0.0)
+    http (5.2.0)
       addressable (~> 2.8)
+      base64 (~> 0.1)
       http-cookie (~> 1.0)
       http-form_data (~> 2.2)
-      llhttp-ffi (~> 0.4.0)
+      llhttp-ffi (~> 0.5.0)
     http-accept (1.7.0)
-    http-cookie (1.0.5)
+    http-cookie (1.0.8)
       domain_name (~> 0.5)
     http-form_data (2.3.0)
     http_parser.rb (0.8.0)
-    line-bot-api (1.18.0)
-    llhttp-ffi (0.4.0)
+    line-bot-api (1.29.1)
+    llhttp-ffi (0.5.0)
       ffi-compiler (~> 1.0)
       rake (~> 13.0)
-    mime-types (3.4.1)
+    logger (1.6.5)
+    mime-types (3.6.0)
+      logger
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2022.0105)
-    mustermann (2.0.2)
+    mime-types-data (3.2025.0107)
+    mustermann (3.0.3)
       ruby2_keywords (~> 0.0.1)
     netrc (0.11.0)
     nio4r (2.7.4)
-    public_suffix (4.0.7)
-    puma (5.6.4)
+    public_suffix (6.0.1)
+    puma (6.6.0)
       nio4r (~> 2.0)
-    rack (2.2.4)
-    rack-protection (2.2.2)
-      rack
-    rake (13.0.6)
+    rack (2.2.10)
+    rack-protection (3.2.0)
+      base64 (>= 0.1.0)
+      rack (~> 2.2, >= 2.2.4)
+    rake (13.2.1)
     reel (0.6.1)
       celluloid (>= 0.15.1)
       celluloid-io (>= 0.15.0)
@@ -58,27 +75,35 @@ GEM
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
     ruby2_keywords (0.0.5)
-    sinatra (2.2.2)
-      mustermann (~> 2.0)
-      rack (~> 2.2)
-      rack-protection (= 2.2.2)
+    sinatra (3.2.0)
+      mustermann (~> 3.0)
+      rack (~> 2.2, >= 2.2.4)
+      rack-protection (= 3.2.0)
       tilt (~> 2.0)
-    thin (1.8.1)
+    thin (1.8.2)
       daemons (~> 1.0, >= 1.0.9)
       eventmachine (~> 1.0, >= 1.0.4)
       rack (>= 1, < 3)
-    tilt (2.0.11)
-    timers (4.3.3)
-    unf (0.1.4)
-      unf_ext
-    unf_ext (0.0.8.2)
-    webrick (1.7.0)
-    websocket-driver (0.7.5)
+    tilt (2.6.0)
+    timers (4.3.5)
+    webrick (1.9.1)
+    websocket-driver (0.7.7)
+      base64
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
 
 PLATFORMS
+  aarch64-linux-gnu
+  aarch64-linux-musl
+  arm-linux-gnu
+  arm-linux-musl
+  arm64-darwin
   ruby
+  x86-linux-gnu
+  x86-linux-musl
+  x86_64-darwin
+  x86_64-linux-gnu
+  x86_64-linux-musl
 
 DEPENDENCIES
   geocoder
@@ -92,4 +117,4 @@ DEPENDENCIES
   webrick
 
 BUNDLED WITH
-   2.3.7
+   2.5.16
