@@ -3,7 +3,7 @@ require 'json'
 require 'open-uri'
 
 def fetch_tokyo_events
-  url = 'https://tokyo-events.herokuapp.com/api'
+  url = 'https://tokyo-events.herokuapp.com/api/events'
   begin
     data_serialized = URI.open(url).read
   rescue OpenURI::HTTPError => e
