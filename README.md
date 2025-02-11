@@ -1,13 +1,16 @@
-Built on the shoulder of giants, especially https://github.com/hidehiro98/
+Built on the shoulder of giants, especially https://github.com/hidehiro98/, https://github.com/YannKlein/, https://github.com/dmbf29/
 
 # LINE Bot 101
 
 ## Line Bot example (scan the QR code with your Line app)
-![qr code](https://github.com/YannKlein/bob-the-bot/blob/master/images/qrcode.png?raw=true)
+![qr code](https://github.com/SuzukiRyuichiro/bob-the-bot-v4/blob/b1da352334cf099354364647b71493ba99e28b56/images/qrcode.png)
 
 ## What we use
 - [LINE Messaging API](https://developers.line.me/en/docs/messaging-api/)
 - [Heroku](https://www.heroku.com)
+- [OpenWeatherMap Weather API](https://openweathermap.org/api/one-call-3)
+- [Google Gemini API](https://aistudio.google.com/)
+- [Tokyo Events API by Yann](https://tokyo-events.herokuapp.com/)
 
 ## Slides
 - This covers the Line configuration, step by step.
@@ -55,7 +58,7 @@ Open a terminal (search for "Terminal" (Mac, Ubuntu) or "Command Prompt" (Window
 
 We will dowload the bot code from Github, then we will push it to Heroku:
 ```
-git clone https://github.com/lewagonjapan/bob-the-bot.git [CHANGE_THIS_TO_YOUR_BOT_NAME]
+git clone https://github.com/SuzukiRyuichiro/bob-the-bot-v4.git [CHANGE_THIS_TO_YOUR_BOT_NAME]
 cd [CHANGE_THIS_TO_YOUR_BOT_NAME]
 heroku login
 heroku create [CHANGE_THIS_TO_YOUR_BOT_NAME]
