@@ -13,6 +13,8 @@ def get_response_from_gemini(message)
 
   response = HTTParty.post(url, body: body, headers: { 'Content-Type' => 'application/json' })
 
+  p JSON.parse(response.body, { symbolize_names: true })
+
   bot_message = JSON.parse(response.body, { symbolize_names: true }).dig(:candidates, 0, :content, :parts, 0, :text)
 
   bot_message.nil? ? "Huh, the bot couldn't process your message" : bot_message
