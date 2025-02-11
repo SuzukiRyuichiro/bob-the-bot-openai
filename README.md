@@ -9,6 +9,7 @@ Built on the shoulder of giants, especially https://github.com/hidehiro98/, http
 - [LINE Messaging API](https://developers.line.me/en/docs/messaging-api/)
 - [Heroku](https://www.heroku.com)
 - [OpenWeatherMap Weather API](https://openweathermap.org/api/one-call-3)
+- [Imagga Image recognition API](https://imagga.com)
 - [Google Gemini API](https://aistudio.google.com/)
 - [Tokyo Events API by Yann](https://tokyo-events.herokuapp.com/)
 
@@ -91,7 +92,7 @@ heroku config:set IMAGGA_SECRET=[CHANGE_THIS_TO_YOUR_IMAGGA_API_SECRET]
 ```
 ## Ready to Upgrade? Making Changes to your Bot
 - Make your changes in your text editor
-- You can download [ Sublime Text](https://www.sublimetext.com/) or [VS code](https://code.visualstudio.com/) if you don't have one.
+- You can download [VS code](https://code.visualstudio.com/) if you don't have one.
 - Commit your changes and send them to Heroku:
 ```
 git add .
@@ -125,3 +126,4 @@ heroku logs
 - [hidehiro98](https://github.com/hidehiro98/)
 - [yannklein](https://github.com/yannklein/)
 - [dmbf29](https://github.com/dmbf29/)
+- [SuzukiRyuichiro](https://github.com/SuzukiRyuichiro)
