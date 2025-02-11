@@ -9,6 +9,7 @@ require 'line/bot'
 require_relative 'imagga'
 require_relative 'weather_api'
 require_relative 'tokyo_events_api'
+require_relative 'google_gemini_api'
 
 def client
   @client ||= Line::Bot::Client.new do |config|
@@ -36,7 +37,8 @@ def bot_answer_to(message, user_name)
     # respond if a user asks a question
     "Good question, #{user_name}!" # We can send this to OpenAI API
   else
-    ["I couldn't agree more.", 'Great to hear that.', 'Interesting.'].sample
+    # ["I couldn't agree more.", 'Great to hear that.', 'Interesting.'].sample
+    get_response_from_gemini(message)
   end
 end
 
