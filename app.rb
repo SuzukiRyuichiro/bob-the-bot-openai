@@ -35,10 +35,9 @@ def bot_answer_to(message, user_name)
     fetch_tokyo_events
   elsif message.end_with?('?')
     # respond if a user asks a question
-    "Good question, #{user_name}!" # We can send this to OpenAI API
+    get_response_from_gemini(message) # We can send this to LLM API
   else
-    # ["I couldn't agree more.", 'Great to hear that.', 'Interesting.'].sample
-    get_response_from_gemini(message)
+    ["I couldn't agree more.", 'Great to hear that.', 'Interesting.'].sample
   end
 end
 
