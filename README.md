@@ -2,8 +2,6 @@ Built on the shoulder of giants, especially https://github.com/hidehiro98/
 
 # LINE Bot 101
 
-[日本語ドキュメント](README.ja.md)
-
 ## Line Bot example (scan the QR code with your Line app)
 ![qr code](https://github.com/YannKlein/bob-the-bot/blob/master/images/qrcode.png?raw=true)
 
@@ -89,7 +87,7 @@ heroku config:set IMAGGA_KEY=[CHANGE_THIS_TO_YOUR_IMAGGA_API_KEY]
 heroku config:set IMAGGA_SECRET=[CHANGE_THIS_TO_YOUR_IMAGGA_API_SECRET]
 ```
 ## Ready to Upgrade? Making Changes to your Bot
-- Make your changes in your text editor 
+- Make your changes in your text editor
 - You can download [ Sublime Text](https://www.sublimetext.com/) or [VS code](https://code.visualstudio.com/) if you don't have one.
 - Commit your changes and send them to Heroku:
 ```
