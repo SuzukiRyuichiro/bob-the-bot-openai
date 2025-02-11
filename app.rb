@@ -1,4 +1,5 @@
-# app.rb
+# rubocop:disable Metrics/MethodLength
+
 require 'sinatra'
 require 'json'
 require 'net/http'
@@ -19,9 +20,6 @@ def client
 end
 
 def bot_answer_to(message, user_name)
-  # If you want to add Bob to group chat, uncomment the next line
-  # return '' unless message.downcase.include?('bob') # Only answer to messages with 'bob'
-
   if message.downcase.include?('hello')
     # respond if a user says hello
     "Hello #{user_name}, how are you doing today?"
@@ -35,7 +33,7 @@ def bot_answer_to(message, user_name)
     fetch_tokyo_events
   elsif message.end_with?('?')
     # respond if a user asks a question
-    get_response_from_gemini(message) # We can send this to LLM API
+    get_response_from_gemini(message)
   else
     ["I couldn't agree more.", 'Great to hear that.', 'Interesting.'].sample
   end
@@ -115,3 +113,5 @@ post '/callback' do
   end
   'OK'
 end
+
+# rubocop:enable Metrics/MethodLength
