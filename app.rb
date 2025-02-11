@@ -101,7 +101,7 @@ post '/callback' do
       # when receive an image message
     when Line::Bot::Event::MessageType::Image
       if ENV['IMAGGA_KEY'].nil? || ENV['IMAGGA_SECRET'].nil?
-        send_bot_message("You haven't setup imagga API key and secret yet")
+        send_bot_message("You haven't setup imagga API key and secret yet", client, event)
         break
       end
 
