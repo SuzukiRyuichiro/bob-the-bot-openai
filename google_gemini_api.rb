@@ -26,6 +26,8 @@ def build_body(message)
 end
 
 def fetch_response(url, body)
+  return "It seems you haven't set up Gemini API key" if ENV['GOOGLE_GEMINI_API_TOKEN'].nil?
+
   response = HTTParty.post(url, body: body, headers: { 'Content-Type' => 'application/json' })
   parsed_response = JSON.parse(response.body, { symbolize_names: true })
   p parsed_response

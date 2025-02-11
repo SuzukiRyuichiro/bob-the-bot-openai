@@ -100,6 +100,11 @@ post '/callback' do
       end
       # when receive an image message
     when Line::Bot::Event::MessageType::Image
+      if ENV['IMAGGA_KEY'].nil? || ENV['IMAGGA_SECRET'].nil?
+        send_bot_message("You haven't setup imagga API key and secret yet")
+        break
+      end
+
       response_image = client.get_message_content(event.message['id'])
       fetch_imagga(response_image) do |image_results|
         # Sending the image results
